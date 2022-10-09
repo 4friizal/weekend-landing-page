@@ -8,6 +8,7 @@ import astro from "../assets/atro.png";
 import PathTop from "../assets/Path 4.png";
 import PathBottom from "../assets/Path 5.png";
 import Path3 from "../assets/Path 3.png";
+import Aos from "aos";
 
 import Header from "../components/Header";
 import Card from "../components/Card";
@@ -61,6 +62,7 @@ export default function App() {
   useEffect(() => {
     fetchDataTestimonial();
     fetchDataTips();
+    Aos.init({ duration: 2000 });
   }, []);
 
   // fetch data Testimonial
@@ -157,7 +159,7 @@ export default function App() {
 
         {/*AboutSection */}
         <div>
-          <div className="relative">
+          <div className="relative" data-aos="fade-left">
             <img src={PathTop} alt="path" className="absolute right-0" />
             <img
               src={astro}
@@ -165,7 +167,10 @@ export default function App() {
               className="absolute right-8 top-0 w-24 -rotate-90"
             />
           </div>
-          <div className="text-black px-8 text-right md:px-36 lg:px-96 lg:max-w-7xl xl:mx-auto">
+          <div
+            className="text-black px-8 text-right md:px-36 lg:px-96 lg:max-w-7xl xl:mx-auto"
+            data-aos="zoom-in"
+          >
             <p className="pt-56 text-base leading-6 font-medium md:text-lg">
               <span className="font-bold text-[#0B24FB] lg:text-right">
                 Deffinition;{" "}
@@ -266,7 +271,7 @@ export default function App() {
               wknd@<span className="font-normal ">2020</span>
             </p>
             <div className="border-white border-2 rounded-full">
-              <p className=" font-light px-[10px] py-[2px] md:text-lg">
+              <p className="font-light px-[10px] py-[2px] md:text-lg">
                 alpha version 0.1
               </p>
             </div>
