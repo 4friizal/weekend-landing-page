@@ -95,6 +95,7 @@ export default function App() {
   // slick slider
   const settings = {
     className: "slider variable-width",
+    dots: true,
     infinite: false,
     centerMode: true,
     variableWidth: true,
@@ -138,7 +139,7 @@ export default function App() {
       <div className="bg-[#EEBECE] font-WorkSans">
         <Header />
         {/* hero section */}
-        <div className="bg-cover bg-center lg:min-h-[102vh] bg-[url('../assets/Background.png')] md:mb-36">
+        <div className="bg-cover bg-center lg:min-h-[102vh] bg-[url('../assets/Background.png')] mb-36">
           <section className="lg:max-w-7xl xl:mx-auto">
             <div className=" text-center text-white pt-16">
               <h1 className="font-extrabold text-[52px] leading-[51px] lg:text-[62px]">
@@ -148,7 +149,7 @@ export default function App() {
                 Stay active with a little workout.
               </h5>
             </div>
-            <div className="flex justify-center items-center flex-col relative ">
+            <div className="flex justify-center items-center flex-col relative">
               <img
                 src={astro}
                 alt="astro"
@@ -163,7 +164,7 @@ export default function App() {
 
         {/*AboutSection */}
         <div>
-          <div className="relative">
+          <div className="relative" data-aos="fade-left">
             <img src={PathTop} alt="path" className="absolute right-0" />
             <img
               src={astro}
