@@ -92,13 +92,39 @@ export default function App() {
   // slick slider
   const settings = {
     className: "slider variable-width",
-    dots: true,
     infinite: false,
     centerMode: true,
     variableWidth: true,
     speed: 500,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          arrows: false,
+        },
+      },
+    ],
   };
 
   return (
@@ -163,7 +189,7 @@ export default function App() {
               Testimonial
             </h4>
           </div>
-          <div className="lg:w-[621px] lg:mx-auto">
+          <div className="mx-5 md:mx-20 lg:w-[621px] lg:mx-auto">
             <Slider {...settings}>
               {testimonials.map((testimonial) => (
                 <Card
