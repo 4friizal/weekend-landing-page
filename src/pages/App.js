@@ -241,7 +241,7 @@ export default function App() {
               </div>
             </div>
           </div>
-          <div className="pt-16">
+          <div className="pt-16" data-aos="fade-right">
             <div className="relative">
               <img src={PathBottom} alt="path" className="-px-8" />
               <img
