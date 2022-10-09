@@ -107,6 +107,7 @@ export default function App() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: false,
           arrows: false,
         },
       },
@@ -116,6 +117,8 @@ export default function App() {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
+          centerMode: false,
+          arrows: false,
         },
       },
       {
@@ -160,7 +163,7 @@ export default function App() {
 
         {/*AboutSection */}
         <div>
-          <div className="relative" data-aos="fade-left">
+          <div className="relative">
             <img src={PathTop} alt="path" className="absolute right-0" />
             <img
               src={astro}
