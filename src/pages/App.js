@@ -58,6 +58,7 @@ function SamplePrevArrow(props) {
 export default function App() {
   const [testimonials, SetTestimonials] = useState([]);
   const [tips, setTips] = useState([]);
+  // const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetchDataTestimonial();
@@ -131,10 +132,10 @@ export default function App() {
 
   return (
     <>
-      <div className="bg-[#EEBECE] font-">
+      <div className="bg-[#EEBECE] font-WorkSans">
         <Header />
         {/* hero section */}
-        <div className="bg-cover bg-center lg:min-h-[102vh] bg-[url('../assets/Background.png')] lg:mb-36">
+        <div className="bg-cover bg-center lg:min-h-[102vh] bg-[url('../assets/Background.png')] md:mb-36">
           <section className="lg:max-w-7xl xl:mx-auto">
             <div className=" text-center text-white pt-16">
               <h1 className="font-extrabold text-[52px] leading-[51px] lg:text-[62px]">
@@ -190,11 +191,17 @@ export default function App() {
         <div>
           <div className="md:px-20 lg:pt-20 ">
             <div className="w-[89px] h-[89px] bg-[#0B24FB] rounded-full ml-14 md:ml-8 md:w-28 md:h-28 lg:w-[89px] lg:h-[89px]"></div>
-            <h4 className="text-[32px] leading-9 text-white font-extrabold ml-8 -mt-5 pb-[75px] md:text-5xl md:ml-0 lg:text-center lg:-mt-14">
+            <h4
+              className="text-[32px] leading-9 text-white font-extrabold ml-8 -mt-5 pb-[75px] md:text-5xl md:ml-0 lg:text-center lg:-mt-14"
+              data-aos="fade-up"
+            >
               Testimonial
             </h4>
           </div>
-          <div className="mx-5 md:mx-20 lg:w-[621px] lg:mx-auto">
+          <div
+            className="mx-5 md:mx-20 lg:w-[621px] lg:mx-auto"
+            data-aos="zoom-out"
+          >
             <Slider {...settings}>
               {testimonials.map((testimonial) => (
                 <Card

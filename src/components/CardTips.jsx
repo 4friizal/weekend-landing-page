@@ -3,7 +3,10 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 export default function CardTips(props) {
   return (
-    <div className="mb-3 relative lg:mx-2 lg:w-[311px] lg:h-[176px] bg-black overflow-hidden group ">
+    <div
+      className="mb-3 relative lg:mx-2 lg:w-[311px] lg:h-[176px] bg-black overflow-hidden group"
+      data-aos="zoom-in"
+    >
       <div className="lg:hover:opacity-50">
         <img
           src={props.img}
