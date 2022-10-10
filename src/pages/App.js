@@ -183,7 +183,10 @@ export default function App() {
               Testimonial
             </h4>
           </div>
-          <div className="md:mx-20 lg:w-[621px] lg:mx-auto" data-aos="zoom-out">
+          <div
+            className="pr-0 md:mx-20 lg:w-[621px] lg:mx-auto"
+            data-aos="zoom-out"
+          >
             <Slider {...settings}>
               {testimonials.map((testimonial) => (
                 <Card
